@@ -160,22 +160,6 @@ export default function Tabula() {
           </form>
         </div>
         <div>
-          <form>
-            <label htmlFor="Cik">Lapā rādīt:</label>
-            <select
-              id="form-div-input-small"
-              name="cik"
-              onChange={(event) => {
-                setPageSize(event.target.value);
-                setCurrentPage(1);
-              }}
-              value={pageSize}
-            >
-              <option value="2">2</option>
-              <option value="5">5</option>
-              <option value="10">10</option>
-            </select>
-          </form>
           {/* <form>
             <label htmlFor="Cik">Lapā rādīt:</label>
             <input
@@ -200,7 +184,22 @@ export default function Tabula() {
               placeholder="Search"
             />
           </form>
-
+          <form>
+            <label htmlFor="Cik">Lapā rādīt:</label>
+            <select
+              id="form-div-input-small"
+              name="cik"
+              onChange={(event) => {
+                setPageSize(event.target.value);
+                setCurrentPage(1);
+              }}
+              value={pageSize}
+            >
+              <option value="2">2</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+            </select>
+          </form>
           <Pagination
             className="pagination-bar"
             currentPage={currentPage}
