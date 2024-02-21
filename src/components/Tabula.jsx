@@ -124,7 +124,7 @@ export default function Tabula() {
   };
   return (
     <>
-      <div>
+      <div className="centra">
         <h1 className="title">Tabula</h1>
         <div id="form-div">
           <form onSubmit={handleNewRow}>
@@ -184,31 +184,33 @@ export default function Tabula() {
               placeholder="Search"
             />
           </form>
-          <form>
-            <label htmlFor="Cik">Lapā rādīt:</label>
-            <select
-              id="form-div-input-small"
-              name="cik"
-              onChange={(event) => {
-                setPageSize(event.target.value);
-                setCurrentPage(1);
-              }}
-              value={pageSize}
-            >
-              <option value="2">2</option>
-              <option value="5">5</option>
-              <option value="10">10</option>
-            </select>
-          </form>
-          <Pagination
-            className="pagination-bar"
-            currentPage={currentPage}
-            totalCount={
-              filteredData ? filteredData.length : employeeData.length
-            }
-            pageSize={pageSize}
-            onPageChange={(page) => setCurrentPage(page)}
-          />
+          <div className="pagination-set">
+            <Pagination
+              className="pagination-bar"
+              currentPage={currentPage}
+              totalCount={
+                filteredData ? filteredData.length : employeeData.length
+              }
+              pageSize={pageSize}
+              onPageChange={(page) => setCurrentPage(page)}
+            />
+            <form className="pagination-show">
+              <label htmlFor="Cik">Lapā rādīt:</label>
+              <select
+                id="form-div-input-small"
+                name="cik"
+                onChange={(event) => {
+                  setPageSize(event.target.value);
+                  setCurrentPage(1);
+                }}
+                value={pageSize}
+              >
+                <option value="2">2</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+              </select>
+            </form>
+          </div>
         </div>
 
         <table>
