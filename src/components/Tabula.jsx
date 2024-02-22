@@ -130,7 +130,7 @@ export default function Tabula() {
   return (
     <>
       <div className="centra">
-        <h1 className="title">Tabula</h1>
+        <h2>Tabula</h2>
         <div id="form-div">
           <form onSubmit={handleNewRow}>
             <label htmlFor="Vārds">Vārds:</label>

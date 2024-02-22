@@ -1,7 +1,7 @@
 #root {
   /* max-width: 1280px; */
   margin: auto;
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
 }
@@ -27,7 +27,7 @@
 .fixed-top {
   width: 100%;
   height: 53px;
-  background: #7f7d7d;
+  background: #515c84;
   position: fixed;
   top: 0;
   padding: auto;
@@ -36,7 +36,7 @@
 .fixed-bottom {
   width: 100vw;
   height: 44px;
-  background: #7f7d7d;
+  background: #515c84;
   position: fixed;
   bottom: 0;
   padding: auto;
@@ -50,7 +50,11 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
+h2 {
+  /* text-align: center; */
+  width: 50%;
+  margin: auto;
+}
 /* .container {
   max-width: 100vw;
   place-items: center;
@@ -66,10 +70,13 @@ h1 {
   margin-bottom: 30px;
 } */
 
-/* .centra {
-  display: flexbox;
-  align-items: center;
-} */
+.centra {
+  /* display: flex; */
+  /* text-align: left; */
+  padding-top: 15px;
+  width: 70%;
+  margin: auto;
+}
 
 .pagination-set {
   display: flex;
@@ -126,12 +133,12 @@ th .header-container {
   width: 100%;
   height: 20px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   max-width: fit-content;
 }
 th,
 td {
-  padding: 5px 10px;
+  padding: 5px 2px;
   text-align: left;
   /* vertical-align: top; */
   border-left: 1px solid #ddd;
@@ -151,9 +158,9 @@ th svg.desc {
 }
 
 input {
-  font-size: 16px;
+  font-size: 14px;
   border: none;
-  padding: 12px 12px;
+  padding: 6px 6px;
   font-family: "Poppins", sans-serif;
   width: 100%;
   max-width: fit-content;

@@ -1,6 +1,8 @@
+import "../App.css";
+
 export default function ParMani() {
   return (
-    <>
+    <div className="centra">
       <h2>Par mani</h2>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Turpis nunc eget lorem
@@ -111,6 +113,6 @@ export default function ParMani() {
       tristique nulla aliquet. Ornare aenean euismod elementum nisi quis
       eleifend quam. Diam ut venenatis tellus in metus vulputate eu scelerisque
       felis.
-    </>
+    </div>
   );
 }
