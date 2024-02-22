@@ -5,7 +5,7 @@ export default function Nav() {
     <nav className="fixed-top">
       <ul>
         <li>
-          <NavLink to="/parmani">Par mani</NavLink> |
+          <NavLink to="/">Par mani</NavLink> |
           <NavLink to="/tabula">Tabula</NavLink>
         </li>
       </ul>
