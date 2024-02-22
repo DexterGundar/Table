@@ -4,10 +4,12 @@ import "../App.css";
 import Pagination from "./Pagination";
 import Caret from "./Icon/Caret";
 import { headers, data } from "./tableData.js";
+import Loading from "./Loading";
 
 let count = data.length;
 
 export default function Tabula() {
+  const [loading, setLoading] = useState(true);
   const [employeeData, setEmployeeData] = useState(data);
   const [filteredData, setFilteredData] = useState();
   const [searchVal, setSearchVal] = useState();
@@ -110,6 +112,7 @@ export default function Tabula() {
       );
       setFilteredData(filterData);
     } else setFilteredData();
+    setLoading(false);
   }, [searchVal, employeeData]);
 
   const onSearchInput = (e) => {
@@ -122,6 +125,8 @@ export default function Tabula() {
     );
     setFilteredData(filterData);
   };
+
+  if (loading) return <Loading />;
   return (
     <>
       <div className="centra">
