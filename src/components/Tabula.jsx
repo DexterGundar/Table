@@ -275,6 +275,7 @@ export default function Tabula() {
                       name="phoneNumber"
                       type="tel"
                       value={phoneNumber}
+                      // disabled={searchVal}
                       onChange={(e) => onChangeInput(e, employeeId)}
                       placeholder="Telefona numurs"
                     />
