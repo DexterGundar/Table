@@ -27,7 +27,7 @@
 .fixed-top {
   width: 100%;
   height: 53px;
-  background: #515c84;
+  background: #aab9ee;
   position: fixed;
   top: 0;
   padding: auto;
@@ -36,7 +36,7 @@
 .fixed-bottom {
   width: 100vw;
   height: 44px;
-  background: #515c84;
+  background: #aab9ee;
   position: fixed;
   bottom: 0;
   padding: auto;

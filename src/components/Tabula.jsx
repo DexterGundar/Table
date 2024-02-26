@@ -25,6 +25,7 @@ export default function Tabula() {
   const [newPhoneNr, setNewPhoneNr] = useState("");
 
   const onChangeInput = (e, employeeId) => {
+    setSort({});
     const { name, value } = e.target;
     const editData = employeeData.map((item) =>
       item.employeeId === employeeId && name ? { ...item, [name]: value } : item
@@ -165,9 +166,9 @@ export default function Tabula() {
               name="phoneNumber"
               onChange={(event) => setNewPhoneNr(event.target.value)}
               value={newPhoneNr}
-              placeholder="☎️"
+              placeholder="☎"
             />
-            <button type="submit"> ✅</button>
+            <button type="submit">✅</button>
           </form>
         </div>
         <div>
@@ -255,7 +256,7 @@ export default function Tabula() {
                       name="name"
                       value={name}
                       type="text"
-                      disabled={searchVal}
+                      // disabled={searchVal}
                       onChange={(e) => onChangeInput(e, employeeId)}
                       placeholder="Vārds"
                     />
@@ -265,7 +266,7 @@ export default function Tabula() {
                       name="lastName"
                       value={lastName}
                       type="text"
-                      disabled={searchVal}
+                      // disabled={searchVal}
                       onChange={(e) => onChangeInput(e, employeeId)}
                       placeholder="Uzvārds"
                     />
