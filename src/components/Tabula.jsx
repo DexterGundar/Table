@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import "../index.css";
 import "../App.css";
+import "../pagination.css";
 import Pagination from "./Pagination";
 import Caret from "./Icon/Caret";
 import { headers, data } from "./tableData.js";
@@ -73,6 +74,8 @@ export default function Tabula() {
     setEmployeeData((currentData) => {
       return [newRow, ...currentData];
     });
+    setSort({ direction: "desc" });
+    setCurrentPage(1);
   }
 
   function deleteRow(employeeId) {
@@ -133,7 +136,7 @@ export default function Tabula() {
         <h2>Tabula</h2>
         <div id="form-div">
           <form onSubmit={handleNewRow}>
-            <label htmlFor="Vārds">Vārds:</label>
+            {/* <label htmlFor="Vārds">Vārds:</label> */}
             <input
               required
               id="form-div-input"
@@ -142,8 +145,9 @@ export default function Tabula() {
               onChange={(event) => setNewName(event.target.value)}
               // onChange={(event) => setNewName({...new, name:event.target.value})}
               value={newName}
+              placeholder="Name"
             />
-            <label htmlFor="Uzvārds">Uzvārds:</label>
+            {/* <label htmlFor="Uzvārds">Uzvārds:</label> */}
             <input
               required
               id="form-div-input"
@@ -151,8 +155,9 @@ export default function Tabula() {
               name="lastName"
               onChange={(event) => setNewLastName(event.target.value)}
               value={newLastName}
+              placeholder="Lastname"
             />
-            <label htmlFor="Tel nr">Tel. nr.:</label>
+            {/* <label htmlFor="Tel nr"> ☎️ </label> */}
             <input
               required
               id="form-div-input"
@@ -160,8 +165,9 @@ export default function Tabula() {
               name="phoneNumber"
               onChange={(event) => setNewPhoneNr(event.target.value)}
               value={newPhoneNr}
+              placeholder="☎️"
             />
-            <button type="submit">Pievienot rindu</button>
+            <button type="submit"> ✅</button>
           </form>
         </div>
         <div>
@@ -199,22 +205,24 @@ export default function Tabula() {
               pageSize={pageSize}
               onPageChange={(page) => setCurrentPage(page)}
             />
-            <form className="pagination-show">
-              <label htmlFor="Cik">Lapā rādīt:</label>
-              <select
-                id="form-div-input-small"
-                name="cik"
-                onChange={(event) => {
-                  setPageSize(event.target.value);
-                  setCurrentPage(1);
-                }}
-                value={pageSize}
-              >
-                <option value="2">2</option>
-                <option value="5">5</option>
-                <option value="10">10</option>
-              </select>
-            </form>
+            <div className="pagination-show">
+              <form>
+                <label htmlFor="Cik">Lapā rādīt:</label>
+                <select
+                  id="form-div-input-small"
+                  name="cik"
+                  onChange={(event) => {
+                    setPageSize(event.target.value);
+                    setCurrentPage(1);
+                  }}
+                  value={pageSize}
+                >
+                  <option value="2">2</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                </select>
+              </form>
+            </div>
           </div>
         </div>
 
