@@ -256,7 +256,7 @@ export default function Tabula() {
                       name="name"
                       value={name}
                       type="text"
-                      // disabled={searchVal}
+                      disabled={searchVal}
                       onChange={(e) => onChangeInput(e, employeeId)}
                       placeholder="Vārds"
                     />
@@ -266,7 +266,7 @@ export default function Tabula() {
                       name="lastName"
                       value={lastName}
                       type="text"
-                      // disabled={searchVal}
+                      disabled={searchVal}
                       onChange={(e) => onChangeInput(e, employeeId)}
                       placeholder="Uzvārds"
                     />
