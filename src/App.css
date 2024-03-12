@@ -1,5 +1,4 @@
 #root {
-  /* max-width: 1280px; */
   margin: auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -10,19 +9,6 @@
     margin: 1em 2em;
   }
 }
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
 
 .fixed-top {
   width: 100%;
@@ -51,24 +37,9 @@ h1 {
   line-height: 1.1;
 }
 h2 {
-  /* text-align: center; */
   width: 50%;
   margin: auto;
 }
-/* .container {
-  max-width: 100vw;
-  place-items: center;
-  width: 100%;
-  padding: 0 10px;
-  margin: 0 auto;
-  width: fit-content;
-} */
-
-/* .title {
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 30px;
-} */
 
 .centra {
   padding-top: 15px;
@@ -148,7 +119,6 @@ th,
 td {
   padding: 5px 2px;
   text-align: left;
-  /* vertical-align: top; */
   border-left: 1px solid #ddd;
 }
 
@@ -185,7 +155,6 @@ input:hover {
 #form-div {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   max-width: 700px;
   margin: 0 auto;
   width: fit-content;
@@ -200,8 +169,6 @@ input:hover {
   max-width: 90px;
 }
 #form-div-small {
-  /* display: flex; */
-  /* flex-direction: column; */
   align-items: center;
   max-width: 100vw;
   margin: 0 auto;

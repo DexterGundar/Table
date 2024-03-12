@@ -134,7 +134,7 @@ export default function Tabula() {
   return (
     <>
       <div className="centra">
-        <h2>Tabula</h2>
+        <h2>Table</h2>
         <div id="form-div">
           <form onSubmit={handleNewRow}>
             {/* <label htmlFor="Vārds">Vārds:</label> */}
@@ -186,7 +186,7 @@ export default function Tabula() {
             />
           </form> */}
           <form>
-            <label htmlFor="meklēt">Meklēt tabulā:</label>
+            <label htmlFor="meklēt">Search in table:</label>
             <input
               // name="search"
               type="text"
@@ -208,10 +208,10 @@ export default function Tabula() {
             />
             <div className="pagination-show">
               <form>
-                <label htmlFor="Cik">Lapā rādīt:</label>
+                <label htmlFor="rowsPerPage">Rows Per Page:</label>
                 <select
                   id="form-div-input-small"
-                  name="cik"
+                  name="rowsPerPage"
                   onChange={(event) => {
                     setPageSize(event.target.value);
                     setCurrentPage(1);
@@ -234,7 +234,6 @@ export default function Tabula() {
                 <th key={header.KEY} onClick={() => handleHeaderClick(header)}>
                   <div className="header-container">
                     <span>{header.LABEL}</span>
-
                     {header.KEY === sort.keyToSort && (
                       <Caret
                         direction={
@@ -293,7 +292,7 @@ export default function Tabula() {
         </table>
       </div>
       <button type="button" disabled={searchVal} onClick={() => addNewRow()}>
-        Pievienot rindu
+        Add New Row
       </button>
     </>
   );

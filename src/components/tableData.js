@@ -1,15 +1,15 @@
 export const headers = [
   {
     KEY: "name",
-    LABEL: "Vārds",
+    LABEL: "Name",
   },
   {
     KEY: "lastName",
-    LABEL: "Uzvārds",
+    LABEL: "Lastname",
   },
   {
     KEY: "phoneNumber",
-    LABEL: "Tel.nr",
+    LABEL: "Phone number",
   },
 ];
 export const data = [
