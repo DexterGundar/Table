@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Tabula from "./components/Tabula";
-import ParMani from "./components/ParMani";
+import GraphQl from "./components/GraphQl";
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
       <Nav />
 
       <Routes>
-        <Route path="/" element={<ParMani />} />
-        <Route path="/parmani" element={<ParMani />} />
+        <Route path="/" element={<Tabula />} />
+        <Route path="/GraphQl" element={<GraphQl />} />
         <Route path="/tabula" element={<Tabula />} />
       </Routes>
 

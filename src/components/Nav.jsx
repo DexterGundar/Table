@@ -5,7 +5,7 @@ export default function Nav() {
     <nav className="fixed-top">
       <ul>
         <li>
-          <NavLink to="/">About me</NavLink> |
+          <NavLink to="/graphql">GraphQL</NavLink> |
           <NavLink to="/tabula">Table</NavLink>
         </li>
       </ul>
